@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ToggleGroup?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Линейный алгоритм">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFE4E1;">
+               <children>
+                  <Label layoutX="72.0" layoutY="25.0" prefHeight="90.0" prefWidth="355.0" text="𝛼=ln(𝑦−√|𝑥|)∗(𝑥−𝑦2)+sin2𝑎𝑟𝑐𝑡𝑔(𝑧)">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="115.0" prefHeight="42.0" prefWidth="167.0" text="Введите значение х:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="157.0" prefHeight="42.0" prefWidth="167.0" text="Введите значение y:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="199.0" prefHeight="42.0" prefWidth="167.0" text="Введите значение z:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="label1" layoutX="278.0" layoutY="124.0" />
+                  <TextField fx:id="label2" layoutX="278.0" layoutY="165.0" />
+                  <TextField fx:id="label3" layoutX="278.0" layoutY="207.0" />
+                  <Button fx:id="button1" layoutX="203.0" layoutY="266.0" mnemonicParsing="false" onAction="#onClickButton1" prefHeight="37.0" prefWidth="94.0" text="Посчитать" />
+                  <Label fx:id="label4" layoutX="137.0" layoutY="338.0" prefHeight="138.0" prefWidth="237.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Разветвляющийся алгоритм">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFE4E1;">
+               <children>
+                  <Label layoutX="116.0" layoutY="197.0" text="X=">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="116.0" layoutY="246.0" text="Y=">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="labelX" layoutX="153.0" layoutY="196.0" prefHeight="26.0" prefWidth="106.0" />
+                  <TextField fx:id="labelY" layoutX="152.0" layoutY="245.0" prefHeight="26.0" prefWidth="107.0" />
+                  <RadioButton fx:id="radCos" layoutX="349.0" layoutY="196.0" mnemonicParsing="false" text="cos(x)"  toggleGroup="$group">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                      <toggleGroup>
+                          <ToggleGroup fx:id="group" />
+                      </toggleGroup>
+                  </RadioButton>
+                  <Label layoutX="319.0" layoutY="158.0" prefHeight="26.0" prefWidth="140.0" text="Выбор функции:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="radSqr" layoutX="349.0" layoutY="223.0" mnemonicParsing="false" text="sqr(x)"  toggleGroup="$group">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radExp" layoutX="349.0" layoutY="249.0" mnemonicParsing="false" text="exp(x)"  toggleGroup="$group">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <Button fx:id="button2" layoutX="199.0" layoutY="306.0" mnemonicParsing="false" onAction="#onClickButton2" prefHeight="41.0" prefWidth="101.0" text="Посчитать" />
+                  <ImageView fitHeight="124.0" fitWidth="254.0" layoutX="123.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/User/IdeaProjects/Laboratory3/src/sample/assets/algorithm.jpg" />
+                     </image></ImageView>
+                  <Label fx:id="function" layoutX="144.0" layoutY="371.0" prefHeight="114.0" prefWidth="211.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
